@@ -63,7 +63,7 @@ namespace Kolokwium1.Services
                 com.Connection = client;
                 
 
-                List<ReceiptResponse> presponses = new List<ReceiptResponse>();
+                List<ReceiptResponse> responses = new List<ReceiptResponse>();
                 List<string> meds = new List<string>();
 
 
@@ -103,12 +103,12 @@ namespace Kolokwium1.Services
                         response.IdDoctor = (int)reader["IdDoctor"];
                         response.Dose = (int)reader["Dose"];
                         
-                        presponses.Add(response);
+                        responses.Add(response);
                     }
                 }
                 reader.Close();
               
-                return presponses;
+                return responses;
             }
         }
 
